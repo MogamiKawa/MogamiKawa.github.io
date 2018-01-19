@@ -1,8 +1,44 @@
 <!DOCTYPE html>
 <html>
 
+<head>
+    <script>
+        function j2home() {
+            location.href = "/home"
+        }
+
+        function j2project() {
+            location.href = "/project"
+        }
+    </script>
+    <style>
+        .menubar {
+            height: 20px;
+            width: 100%;
+        }
+        
+        .button {
+            height: 90%;
+            width: 150px;
+        }
+        
+        .tag {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
 <body>
-    <h1>Hello World</h1>
+    <div class="menubar">
+        <div class="button" onclick="j2home()">
+            <p>Home</p>
+        </div>
+        <div class="button" onclick="j2project()">
+            <p class="tag">Project</p>
+        </div>
+    </div>
     <p>I'm hosted with GitHub Pages.</p>
+</body>
 
 </html>
