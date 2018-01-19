@@ -3,36 +3,25 @@
 
 <head>
     <script>
-        function j2home() {
-            location.href = "/home"
-        }
-
-        function j2project() {
-            location.href = "/project"
+        function j2project(id) {
+            var a = id.textContent;
+            location.href = "/" + a;
         }
     </script>
     <style>
-        .menubar {
-            height: 20px;
-            width: 100%;
-        }
-        
         .button {
+            height: 50px;
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 14px;
+            font-size: 30px;
         }
     </style>
 </head>
 
 <body>
-    <div class="menubar">
-        <span class="button" onclick="j2home()">
-            Home
-        </span>
-        <span class="button" onclick="j2project()">
-            Project
-        </span>
+    <div class="button">
+        Project
     </div>
+    <div class="name" onclick="j2project(this)">abc</div>
     <p>I'm hosted with GitHub Pages.</p>
 </body>
 
