@@ -18,10 +18,11 @@ jobs:
               sudo apt -y install curl dirmngr apt-transport-https lsb-release ca-certificates
               curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
               sudo apt -y install nodejs
+              npm install hexo-deployer-git --save
       - name: Use Node.js 12.22.12
         uses: actions/setup-node@v1
         with:
-          version: 12.22.12
+          node-version: 12.22.12
       - name: Setup hexo
         env:
           ACTION_DEPLOY_KEY: ${{ secrets.HEXO_DEPLOY_PRI }}
